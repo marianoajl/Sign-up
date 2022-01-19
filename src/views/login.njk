@@ -1,0 +1,35 @@
+{# extending #}
+{% extends "layout/_default.njk" %}
+<!-- Main CSS file por ahora lo ponemos aca pero tenemos que hacer un condicional en el layout creo, 
+veamos, porque desarrollo también tiene que cargar los estilos de cada página fuera del layout-->
+
+{# import macros #}
+{% import "macros/_button.njk" as btn %}
+
+{# Bloque de estilos especificos de éstá página #}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="content/css/index.css">
+{% endblock %}
+
+<!-- endbuild -->
+{% block content %}
+
+    <main>  
+
+        <!-- Include Navigation -->
+        {% block nav %}
+            {% include "layout/_navbar.njk" %}
+        {% endblock %}
+        
+        <!-- Hero Section -->
+        <div>
+            
+        </div>
+
+    <!-- Include footer section -->
+
+{% endblock %}
+{% block js %}
+    {# Bloque de estilos especificos de éstá página #}
+   <script type="text/javascript" src="content/js/index.js"></script>
+{% endblock %}

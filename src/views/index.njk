@@ -1,0 +1,54 @@
+{# extending #}
+{% extends "layout/_default.njk" %}
+<!-- Main CSS file por ahora lo ponemos aca pero tenemos que hacer un condicional en el layout creo, 
+veamos, porque desarrollo también tiene que cargar los estilos de cada página fuera del layout-->
+
+{# import macros #}
+{% import "macros/_button.njk" as btn %}
+
+{# Bloque de estilos especificos de éstá página #}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="content/css/index.css">
+{% endblock %}
+
+<!-- endbuild -->
+{% block content %}
+
+<main class="main container-fluid d-flex flex-column justify-content-center">  
+
+    {% block icon %}
+        {% include "components/_icons.njk" %}
+    {% endblock %}
+
+    <!-- Include Navigation -->
+    {% block nav %}
+        {% include "layout/_navigation.njk" %}
+    {% endblock %}
+
+    <!-- Hero Section -->
+    {% block signup %}
+        {% include "layout/_sign-up.njk" %}
+    {% endblock %}
+
+    <!-- Macro -->
+    {# {% block buttonDefault %}
+        {{ btn.simpleButton( 'btn-outline-secondary btn-lg px-4', 'Default') }}
+    {% endblock %}  #}
+    {# <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button> #}
+    
+    {# footer específico de la página #}
+            
+</main>
+
+    {% block footersignup %}
+        {% include "layout/_footer-sign-up.njk" %}
+    {% endblock %}
+    
+{% endblock %}
+
+{# footer específico de la página #}
+
+{% block js %}
+    {# Bloque de estilos especificos de éstá página #}
+    <script type="text/javascript" src="content/js/index.js"></script>
+{% endblock %}

@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+:root {
+  --bs-white: #ffffff;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-lipstick: #d82028; // assist card red
+  --bs-light-gray: #d8d8d8;
+  --bs-othergray: #9e9c9c;
+  --bs-gray: #616161;
+  --bs-dark-gray: #474747;
+  --bs-black: #323232;
+  --bs-light-blue: #ecf6ff;
+
+  //LABEL CUSTOM COLOR
+  --bs-inact-label: #00000080; // inactive label-font-color
+  --bs-act-label: #1a182480; // active label-font-color
+
+  // BORDER-BOTTOM CUSTOM COLOR
+  --bs-inac-b-bottom: #1a182433; // border-bottom-inactive
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
